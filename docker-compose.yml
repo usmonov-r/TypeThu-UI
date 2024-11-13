@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  
+  ui:
+    build: .
+    container_name: ui_c
+    volumes:
+      - .:/ui
+      # - /ui/node_modules #  dev mode 
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true
+
+
+
